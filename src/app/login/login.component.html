@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="panel panel-default col-sm-6" >
+      <div class="panel-heading">Login</div>
+      <div class="panel-body">
+  
+        <div class="form-group">
+          <label for="usr"> Login:</label>
+          <input type="text" class="form-control" id="usr" [(ngModel)]="user.login">
+        </div>
+        <div class="form-group">
+          <label for="pwd"> Password:</label>
+          <input type="password" class="form-control" id="pwd" [(ngModel)]="user.password">
+        </div>
+  
+        <button class="btn btn-primary" (click)="login()">Submit</button>
+        <button class="btn btn-primary" (click)="register()">Register</button>
+        <div *ngIf="required" class="alert alert-danger">
+          check your required fields!
+        </div>
+        <div *ngIf="added" class="alert alert-danger">
+          added with success!
+        </div>
+      </div>
+    </div>
+  </div>
+  

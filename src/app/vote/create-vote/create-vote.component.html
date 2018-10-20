@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h4>
+      create vote
+    </h4>
+    <div class="form-group">
+      <label for="usr"> Title:</label>
+      <input type="text" class="form-control" id="usr" [(ngModel)]="vote.title">
+    </div>
+    <div class="form-group">
+      <label for="pwd"> Description:</label>
+      <input type="password" class="form-control" id="pwd" [(ngModel)]="vote.description">
+    </div>
+
+
+    <div class="form-group">
+      <label for="pwd"> Choice:</label>
+      <input type="password" class="form-control" id="pwd" [(ngModel)]="choix.valeur">
+    </div>
+
+    <div class="form-group" *ngIf="anotherChoice">
+      <label for="pwd"> Choice:</label>
+      <input type="password" class="form-control" id="pwd" [(ngModel)]="choice.valeur">
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <button class="btn btn-primary" (click)="addNewChoice()">Add another choice</button>
+    <button class="btn btn-primary" (click)="submit()">Submit</button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<p>
+  Votes
+</p>
+<button class="btn btn-primary" (click)="create()">create new vote</button>
+
+<span *ngFor="let vote of votes">
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-body">{{vote.titre}}</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+        {{vote.description}}
+        <span *ngFor="let choix of vote.choix">
+          {{choix.valeur}}
+
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+</span>
